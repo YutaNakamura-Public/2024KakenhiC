@@ -1,0 +1,76 @@
+\documentclass[b5paper]{jarticle}\textwidth=15cm\textheight=21cm
+%\documentclass[b5paper]{tarticle}\textwidth=21cm\textheight=15cm
+\oddsidemargin=-15mm\topmargin=-15mm
+\renewcommand{\baselinestretch}{1.2}
+\usepackage{udline}
+
+\begin{document}
+
+\uc{1文字ずつ読み込むため，
+{\texttt{$\backslash$ul}} の中ではコマンドが使えません。
+これを解消するためには，コマンドと引数をまとめて {\texttt{\char"7B\ と \char"7D}}
+で保護してください。使用例はこのソースを参照して下さい。}
+
+\setnami
+
+\uc{{\texttt{$\backslash$setnami}} でこのように
+{\texttt{$\backslash$uc}} が波線になります。}
+
+\setNami
+
+\uc{他にも太波線 {\texttt{$\backslash$setNami}},
+鋸線 {\texttt{$\backslash$setnoko}},
+点線 {\texttt{$\backslash$settensen}},
+破線 {\texttt{$\backslash$sethasen}},
+二重線 {\texttt{$\backslash$setniju}} (デフォルト),
+一点鎖線 {\texttt{$\backslash$setitten}},
+二点鎖線 {\texttt{$\backslash$setniten}},
+がありますので，お試し下さい。}
+
+\sethasen
+
+\uc{それから英字対応のマクロを作りました。
+{\texttt{$\backslash$eiji}} と {\texttt{$\backslash$Eiji}} で，
+英文を囲みます。
+ただし，{\texttt{$\backslash$Eiji}} の前には
+必ずスペースが必要です。
+英文例 \eiji Once upon a time, 
+there lived five old woman. \Eiji {---} このように単語毎に下線を引きます。}
+
+\settensen
+
+\uc{これを使えば単語毎にボックスに入れるため，
+合字等もきちんとできます。ハイフネーションは無理です。
+{abcdef-ghijk} とハイフネーションさせたいときには，
+{abcdef-}空白{ghijk}として下さい。
+うまくいけばハイフネーションができるはずです。
+英文例\eiji Once upon a time, abcdef- ghijk there lived
+five old woman. \Eiji}
+
+\ul{あと，どうしても \eiji Overfull hbox \Eiji が
+起こりやすくなりますが，これは「仕様」です。あうあう。}\verb+/(^_^)/+
+
+\setitten
+
+\uc{それと，英文等で一点鎖線や破線のようにくり返し単位の長い線種を選ぶと，
+上の例のように単語間の空白がものすごく長くなる
+(最低くり返し単位1個使うため)ので，
+線種は目的に合わせて選んでください。( あるいは改行不可の方を使うか。)}
+
+\setniten
+
+\uc{また，下線はすべて文字を細かくつなげて作っていますので，
+印刷等に時間がかかります。ご了承下さい。}
+
+\Eul{To be to be ten made to be. One two three four five six seven eight nine ten
+eleven twelve. Once upon a time, there lived a young man.}
+
+なお，このファイルは縦書き・横書き兼用サンプルです。
+
+\setnoko
+
+\uc{このファイルのソースの1行目の {\texttt{$\backslash$documentclass}} をコメントアウト\
+( 行頭に {\texttt{\%}} をつける ) して，
+2行目の行頭の {\texttt{\%}} をはずすと縦書き用サンプルになります。}
+
+\end{document}
